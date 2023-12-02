@@ -32,35 +32,16 @@ defmodule AdventOfCode2023.Day2 do
   end
 
   defp count_colours(cube, counts) do
-    count = get_count(cube)
-
-    cond do
-      String.contains?(cube, "red") ->
-        if count > counts.red do
-          %{counts | red: count}
-        else
-          counts
-        end
-
-      String.contains?(cube, "green") ->
-        if count > counts.green do
-          %{counts | green: count}
-        else
-          counts
-        end
-
-      String.contains?(cube, "blue") ->
-        if count > counts.blue do
-          %{counts | blue: count}
-        else
-          counts
-        end
-    end
-  end
-
-  defp get_count(cube) do
     [count | _] = Regex.run(~r/\d+/, cube)
-    String.to_integer(count)
+    count = String.to_integer(count)
+    [colour | _] = Regex.run(~r/(red|green|blue)/, cube)
+    colour = String.to_atom(colour)
+
+    if count > counts[colour] do
+      Map.put(counts, colour, count)
+    else
+      counts
+    end
   end
 
   defp playable_games(%{red: red, green: green, blue: blue})
