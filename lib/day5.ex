@@ -2,8 +2,6 @@ defmodule AdventOfCode2023.Day5 do
   defp load do
     File.read!("lib/resources/day5.txt")
     |> String.split("\n\n")
-
-    # |> Enum.map(&String.replace(&1, "\n", ""))
   end
 
   def one do
@@ -77,15 +75,6 @@ defmodule AdventOfCode2023.Day5 do
     |> Enum.sort()
     |> IO.inspect()
     |> Enum.at(0)
-  end
-
-  defp split_range(start, length) do
-    chunk = Integer.floor_div(length, 4)
-    one = start..(start + chunk - 1)
-    two = (start + chunk)..(start + chunk * 2 - 1)
-    three = (start + chunk * 2)..(start + chunk * 3 - 1)
-    four = (start + chunk * 3)..(start + chunk * 4 - 1 + Integer.mod(length, 4))
-    [one, two, three, four]
   end
 
   def map_seed(key, mapping) do
