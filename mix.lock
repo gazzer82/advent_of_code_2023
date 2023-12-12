@@ -1,0 +1,7 @@
+%{
+  "geo": {:hex, :geo, "3.6.0", "00c9c6338579f67e91cd5950af4ae2eb25cdce0c3398718c232539f61625d0bd", [:mix], [{:jason, "~> 1.4", [hex: :jason, repo: "hexpm", optional: true]}], "hexpm", "1dbdebf617183b54bc3c8ad7a36531a9a76ada8ca93f75f573b0ae94006168da"},
+  "libgraph": {:hex, :libgraph, "0.16.0", "3936f3eca6ef826e08880230f806bfea13193e49bf153f93edcf0239d4fd1d07", [:mix], [], "hexpm", "41ca92240e8a4138c30a7e06466acc709b0cbb795c643e9e17174a178982d6bf"},
+  "seg_seg": {:hex, :seg_seg, "1.0.0", "018dde9369d022ca5b57ccaa38b8a79e378883e7ec65081ed46932c79291f70c", [:mix], [{:vector, "~> 1.0", [hex: :vector, repo: "hexpm", optional: false]}], "hexpm", "19fc9008d727a3cfb1f16fc6b3d6bed110d5c4246b1879494bf0a104f422262c"},
+  "topo": {:hex, :topo, "1.0.0", "1f99aef2637e82e0e6420e32df527936fc41928466378e6248345e8ba1ea468b", [:mix], [{:geo, "~> 3.1", [hex: :geo, repo: "hexpm", optional: false]}, {:seg_seg, "~> 1.0", [hex: :seg_seg, repo: "hexpm", optional: false]}, {:vector, "~> 1.0", [hex: :vector, repo: "hexpm", optional: false]}], "hexpm", "ba86fa461e2c69c7013d4bfb2fdd44d1bd8671019b42121c28c1275068645602"},
+  "vector": {:hex, :vector, "1.1.0", "0789b5e00e9c551d8d5880acab9a8f44ed46690d083af397018bf0c7f30c1092", [:mix], [], "hexpm", "48b0a800ec88e55b12c689b09100e4c9ba41ea1befb459221c085a4e70040696"},
+}
